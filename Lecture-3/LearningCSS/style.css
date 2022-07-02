@@ -1,0 +1,15 @@
+/* SELECTORS */
+h1 {
+  color: rgb(40, 197, 189);
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 40px;
+  color: rgb(40, 197, 189);
+}
+
+p {
+  font-size: 20px;
+}
+/* !SELECTORS */
