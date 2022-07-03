@@ -267,6 +267,7 @@ header p{
 article{
   /* background-color: yellowgreen; */
   float: left;
+  width: 800px;
 }
 
 .related{
@@ -280,4 +281,24 @@ article{
 footer{
   clear: both;
   display: block;
+}
+
+
+/* ADDING THE TOP ARTICLE TAG */
+article{
+  position: relative;
+}
+.post-header::after{
+  content: "TOP";
+  background-color: yellow;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  /* position: relative;
+  top: 100px;
+  left: 300px; */
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  /* left: 0; */
 }
