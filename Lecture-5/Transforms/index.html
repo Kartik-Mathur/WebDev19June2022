@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lavender;
+        }
+        .box{
+            height: 350px;
+            width: 300px;
+            border: 1px solid black;
+            margin: 50px auto;
+            /* box-shadow: 5px 5px 20px black, -5px -5px 20px black; */
+            box-shadow: 5px 5px 20px black;
+            /* transform: rotateZ(45deg) scaleX(1.5); */
+            /* transform: rotateZ(45deg); */
+            /* transform: skewX(45deg); */
+            /* transform: scaleX(1.5); */
+            background-color: chocolate;
+            transition-property: background-color transform;
+            transition-duration: 2s;
+            transition-timing-function: cubic-bezier(0.96,-0.01, 0, 1.07);
+            /* transform-origin: 100% 100%; */
+        }
+
+        .box:hover{
+            background-color: green;
+            transform: rotateZ(1turn);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

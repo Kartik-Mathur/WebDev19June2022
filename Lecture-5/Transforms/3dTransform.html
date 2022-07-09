@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .wrap{
+            background-color: aquamarine;
+            height: 500px;
+            width: 300px;
+            margin: 50px auto;
+        } */
+        /* .box{
+            height: 100%;
+            width: 100%;
+            background-image: url('/img/kartik.jpg');
+            background-color: blue;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
+        body{
+            perspective: 800px;
+        }
+        
+        .wrap{
+            height: 300px;
+            width: 250px;
+            margin: 0 auto;
+            transition-duration: 1s;
+            /* background-color: blue; */
+            transform-style: preserve-3d;
+            transition-property: transfrom;
+        }
+
+        .wrap div{
+            backface-visibility: hidden;
+        }
+
+        .wrap:hover div{
+            transform: rotateY(180deg);
+        }
+        
+        .side-a{
+            /* background-color: rgb(110, 110, 218); */
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            z-index: 100;
+            background-image: url('/img/kartik.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .side-b{
+            background-color: rgb(132, 202, 132);
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="side-a"></div>
+        <div class="side-b">My Photo</div>
+    </div>
+</body>
+</html>

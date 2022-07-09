@@ -1,0 +1,70 @@
+.el {
+  /* height: 50px;
+    width: 50px; */
+  border: 1px solid black;
+}
+
+.el-1 {
+  background-color: burlywood;
+  /* grid-area: ele1; */
+}
+.el-2 {
+  background-color: gray;
+  /* grid-area: ele2; */
+}
+.el-3 {
+  background-color: orange;
+  /* grid-area: ele3; */
+}
+.el-4 {
+  background-color: orangered;
+  /* grid-area: ele4; */
+}
+.el-5 {
+  background-color: purple;
+  grid-column: 1/span 2;
+  grid-row: 1;
+  /* grid-area: ele5; */
+}
+.el-6 {
+  background-color: red;
+}
+.el-7 {
+  background-color: violet;
+}
+.el-8 {
+  background-color: beige;
+}
+
+.container {
+  width: 900px;
+  border: 1px solid black;
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px 100px 100px; */
+  /* grid-template-columns: repeat(3,200px); */
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 100px 100px 100px; */
+  /* grid-template-rows: repeat(3,minmax(100px,1fr)); */
+  grid-template-rows: 200px minmax(100px, 1fr) 200px;
+  /* row-gap: 40px;
+    column-gap: 100px; */
+  gap: 40px 100px;
+  /* justify-items: center; */
+  /* align-items: baseline; */
+  /* grid-template-areas: 
+  "ele1 ele2 ele3"
+  "ele1 ele2 ele3"
+  "ele5 ele5 ele4"
+  ; */
+}
+
+.inner-el{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.post-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
