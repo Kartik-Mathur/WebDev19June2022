@@ -30,20 +30,26 @@
             margin: 0 auto;
             transition-duration: 1s;
             /* background-color: blue; */
-            transform-style: preserve-3d;
-            transition-property: transfrom;
+            /* transform-style: preserve-3d; */
+            transition-property: transform;
+            
         }
 
         .wrap div{
             backface-visibility: hidden;
         }
 
-        .wrap:hover div{
+        .wrap:hover .side-a{
             transform: rotateY(180deg);
+            transition-duration:1s;
+        }
+        .wrap:hover .side-b{
+            transform: rotateY(360deg);
+            transition-duration:1s;
         }
         
         .side-a{
-            /* background-color: rgb(110, 110, 218); */
+            background-color: rgb(110, 110, 218);
             height: 300px;
             width: 250px;
             position: absolute;
