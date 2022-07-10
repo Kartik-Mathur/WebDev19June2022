@@ -1,0 +1,85 @@
+/* ---------------------- 3d Transform -------------------------- */
+body {
+  perspective: 800px;
+}
+
+.wrap {
+  height: 300px;
+  width: 250px;
+  margin: 0 auto;
+  /* background-color: blue; */
+  transform-style: preserve-3d;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.wrap div {
+  backface-visibility: hidden;
+}
+
+.wrap:hover {
+  transform: rotateY(180deg);
+}
+
+.side-a {
+  /* background-color: rgb(110, 110, 218); */
+  height: 300px;
+  width: 250px;
+  position: absolute;
+  z-index: 100;
+  background-image: url("/img/kartik.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.side-b {
+  background-color: lavender;
+  height: 300px;
+  width: 250px;
+  position: absolute;
+  transform: rotateY(180deg);
+  border: 1px solid black;
+}
+/* ---------------------- !3d Transform -------------------------- */
+
+/* ---------------------- GRID Properties ------------------------- */
+
+/* ---------------------- !GRID Properties ------------------------- */
+
+/* ---------------------- Utilities Classes ------------------------- */
+.align-center {
+  text-align: center;
+}
+/* ---------------------- !Utilities Classes ------------------------- */
+
+/* ---------------------- MEDIA QUERIES ------------------------------- */
+@media (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 900px;
+    margin: 0 auto;
+    row-gap: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1199px){
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 900px;
+    margin: 0 auto;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 767px){
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 900px;
+    margin: 0 auto;
+    row-gap: 30px;
+  }
+}
+/* ---------------------- !MEDIA QUERIES ------------------------------- */
