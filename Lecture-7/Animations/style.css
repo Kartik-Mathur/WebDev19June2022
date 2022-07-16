@@ -1,0 +1,51 @@
+.container,
+.prog-bar {
+  border-radius: 10px;
+}
+.container {
+  width: 800px;
+  height: 150px;
+  margin: 80px auto;
+  border: 1px solid black;
+  background-color: lavender;
+}
+
+.prog-bar {
+  width: 100%;
+  height: 100%;
+  background-color: lightsalmon;
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes slide{
+    0%{
+        width: 0%;
+    }
+    30%{
+        width: 40%;
+    }
+    70%{
+        width: 40%;
+        background-color: lightseagreen;
+    }
+    100%{
+        width: 100%;
+        background-color: purple;
+    }
+}
+
+/* @keyframes slide{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+} */
+
+/* ANIMATIONS */
