@@ -1,0 +1,10 @@
+// Statements don't return anything
+const a = 10;
+undefined
+
+let b = 20;
+undefined
+
+var c = 'Hello';
+undefined
+
