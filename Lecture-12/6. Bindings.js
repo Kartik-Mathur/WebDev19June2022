@@ -9,7 +9,7 @@ add(10,20);
 */
 
 // 2. Explicit Binding
-/*
+
 let obj = {
     a: 'Hello',
     f: this
@@ -17,9 +17,9 @@ let obj = {
 
 console.log(obj.f);
 console.log(this);
-*/
 
-let obj = {
+
+obj = {
     a: 'Hello',
     fun: function(){
         console.log(this);
