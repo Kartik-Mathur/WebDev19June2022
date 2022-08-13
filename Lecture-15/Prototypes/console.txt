@@ -1,0 +1,30 @@
+let a = 1;
+undefined
+a.__proto__ == Number.prototype
+true
+let str = 'Hello';
+undefined
+str.__proto__ == String.prototype
+true
+let x = true;
+undefined
+x.__proto__ == Boolean.prototype
+true
+String.prototype
+String {'', constructor: ƒ, anchor: ƒ, at: ƒ, big: ƒ, …}
+String
+ƒ String() { [native code] }
+Function.prototype
+ƒ () { [native code] }
+function fun(){console.log('hello');}
+undefined
+fun.toString() // Kaha se chala? Meine to nhi banaya na hi Function.prototype mei available hai toString()
+"function fun(){console.log('hello');}"
+fun.__proto__ == Function.prototype
+true 
+arr.__proto__ == Array.prototype
+true
+arr.toString()
+'1,2,3,4'
+Array.prototype
+[constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
