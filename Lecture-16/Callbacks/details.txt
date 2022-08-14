@@ -1,0 +1,1 @@
+- Callbacks are used to make async functions work in a synchronous way
