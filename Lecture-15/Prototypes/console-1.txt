@@ -1,0 +1,11 @@
+arr.pop()
+4
+arr
+(3) [1, 2, 3]
+arr.pop = ()=>{console.log("Nahi krne dunga");}
+()=>{console.log("Nahi krne dunga");}
+arr.pop()
+VM2997:1 Nahi krne dunga
+undefined
+arr
+(3) [1, 2, 3, pop: ƒ]
