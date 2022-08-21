@@ -1,0 +1,14 @@
+1. To select the elements from the DOM Tree to manipulate them
+    Different Ways to select elements: Functions
+        - getElementById
+        - getElementsByClassName
+        - getElementByTagName
+        - querySelector
+        - querySelectorAll
+
+2. DOM Properties
+    - innerText
+    - innerHTML
+    - TextContent
+
+3. element.getAttribute('id'), element.setAttribute('id','cb');

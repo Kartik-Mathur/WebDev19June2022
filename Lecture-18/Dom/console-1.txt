@@ -1,0 +1,39 @@
+const para1 = document.querySelector('.para1');
+undefined
+
+para1
+<p class=​"para1">​…​</p>​
+
+para1.innerText
+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia explicabo ab necessitatibus eos, neque, nemo deleniti, cupiditate laudantium commodi architecto aperiam recusandae iste nam temporibus fuga? At, reiciendis. Saepe, optio.'
+const para2 = document.querySelector('.para2');
+undefined
+
+para2.innerText
+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia explicabo ab necessitatibus eos, neque, nemo deleniti, cupiditate laudantium commodi architecto aperiam recusandae iste nam temporibus fuga? At, reiciendis. Saepe, optio.'
+para1.innerText = 'Hello World'
+'Hello World'
+
+para2.innerText = 'Learning Dom Properties'
+'Learning Dom Properties'
+
+para2.innerText = '<div class="h1">This is Inner Div</div>Learning Dom Properties'
+'<div class="h1">This is Inner Div</div>Learning Dom Properties'
+
+para1.innerHTML
+'Hello World'
+
+para1.innerHTML = 'Hello world!!!!!'
+'Hello world!!!!!'
+
+para1.innerHTML = '<div class="h1">This is Inner Div</div>Learning Dom Properties';
+'<div class="h1">This is Inner Div</div>Learning Dom Properties'
+
+para1.innerHTML = '<div class="h1">This is Inner Div</div> <h1>Learning Dom Properties</h1>';
+'<div class="h1">This is Inner Div</div> <h1>Learning Dom Properties</h1>'
+
+para1.getInnerHTML
+ƒ getInnerHTML() { [native code] }
+
+para1.getInnerHTML()
+'<div class="h1">This is Inner Div</div> <h1>Learning Dom Properties</h1>'

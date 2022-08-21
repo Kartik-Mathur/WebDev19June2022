@@ -1,0 +1,24 @@
+const h1 = document.querySelector('h1');
+undefined
+h1.style.fontSize = '50px';
+'50px'
+h1.style.border = '2px solid black';
+'2px solid black'
+h1.style.padding = '10px';
+'10px'
+h1.style.backgroundColor = 'beige';
+'beige'
+h1.style.textTransform = 'uppercase';
+'uppercase'
+h1.style.textTransform = 'lowercase';
+'lowercase'
+h1.style.textTransform = 'uppercase';
+'uppercase'
+h1.style.textAlign = 'center';
+'center'
+const span = document.querySelector('span')
+undefined
+span.style.fontWeight = 'bold'
+'bold'
+span.style.color = 'aqua'
+'aqua'
