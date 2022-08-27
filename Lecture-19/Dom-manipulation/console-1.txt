@@ -1,0 +1,137 @@
+const li = document.querySelector('li');
+undefined
+const div = document.querySelector('div');
+undefined
+div.getAttribute('class')
+'container'
+li.setAttribute('class','list')
+undefined
+li.setAttribute('class','list list-1');
+undefined
+li.setAttribute('class','list');
+undefined
+
+// setAttribute isn't the correct way to apply classes to dom elements
+
+
+const li = document.querySelector('li');
+undefined
+li
+<li>​…​</li>​
+li.innerText
+'C++'
+li.innerText = 'CPP';
+'CPP'
+li.classList.add('list');
+undefined
+li.classList.add('list-1');
+undefined
+li.classList.remove('list');
+undefined
+li.classList.remove('list-1');
+undefined
+li.classList.add('list');
+undefined
+li.classList.add('strike');
+undefined
+
+const li = document.querySelector('li');
+undefined
+li.classList.add('strike');
+undefined
+li.classList.remove('strike');
+undefined
+li.classList.add('strike');
+undefined
+li.classList.remove('strike');
+undefined
+li.classList.add('strike');
+undefined
+li.classList.remove('strike');
+undefined
+li.classList.toggle('strike');
+true
+li.classList.toggle('strike');
+false
+li.classList.toggle('strike');
+true
+li.classList.toggle('strike');
+false
+li.classList.toggle('strike');
+true
+li.classList.toggle('strike');
+false
+li.classList.toggle('strike');
+true
+li.classList.toggle('strike');
+false
+li.classList.contains('strike');
+false
+li.classList.toggle('strike');
+true
+li.classList.contains('strike');
+true
+
+
+
+
+/////////////////////
+const img = document.querySelector('img');
+undefined
+
+img.nextElementSibling
+<p id=​"mypara" class=​"mypara" style=​"color:​ darkolivegreen">​ Mentor at Coding Blocks, teaching C++, Web and CP. ​</p>​
+
+img.previousElementSibling
+<h2>​Learn Web Development NODEJS​</h2>​
+
+img.parentElement
+<header class=​"post-header">​…​</header>​
+
+img.parentElement.parentElement
+<article class=​"post">​…​</article>​
+
+img.parentElement.parentElement.parentElement
+<div class=​"container">​…​</div>​
+
+img.parentElement.parentElement.parentElement.parentElement
+<body data-new-gr-c-s-check-loaded=​"14.1076.0" data-gr-ext-installed>​…​</body>​
+
+img.parentElement.parentElement.parentElement.parentElement.parentElement
+<html lang=​"en">​<head>​…​</head>​<body data-new-gr-c-s-check-loaded=​"14.1076.0" data-gr-ext-installed>​…​</body>​<grammarly-desktop-integration data-grammarly-shadow-root=​"true">​…​</grammarly-desktop-integration>​</html>​
+
+img.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
+null
+
+
+
+////////// 
+const li = document.createElement('li');
+undefined
+li
+<li>​</li>​
+li.innerText = 'Data Science';
+'Data Science'
+li.classList.add('list');
+undefined
+li
+<li class=​"list">​Data Science​</li>​
+const ul = document.querySelector('ul');
+undefined
+ul.appendChild(li);
+<li class=​"list">​…​</li>​
+ul.appendChild(li);
+<li class=​"list">​…​</li>​
+ul.appendChild(li);
+
+
+const li = document.createElement('li');
+undefined
+li.innerText = 'Data Science';
+'Data Science'
+li.classList.add('list');
+undefined
+const ul = document.querySelector('ul');
+undefined
+ul.prepend(li)
+undefined
