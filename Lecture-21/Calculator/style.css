@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 250px;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+#container h4{
+    text-align: center;
+}
+
+#screen{
+    display: block;
+    margin: auto;
+}
+
+table{
+    border: 5px solid #ccc;
+    margin: 20px auto;
+}
+
+td{
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 30px;
+    box-shadow: 1px 1px 5px rgb(85, 85, 85);
+}
+
+td:active{
+    transform: scale(0.9);
+}
+
+button{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
