@@ -63,3 +63,8 @@ btn.addEventListener('mousedown',(ev)=>{
     }
 })
 /////////////////////// MOUSE EVENT ////////////////////////
+
+let para = document.querySelector('p');
+para.onclick = function(){
+    this.setAttribute('contentEditable',true);
+}
