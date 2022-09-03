@@ -34,3 +34,22 @@ one.addEventListener('click',clickOnce);
 //     // this.innerText = '2';
 //     console.log(event);
 // });
+
+//////////////////////// Key event ////////////////////////
+document.body.addEventListener('keydown',(event)=>{
+    // console.log(event);
+    if(event.key == 'b'){
+       document.body.classList.add('blacktheme');
+    }
+})
+
+document.body.addEventListener('keyup',(event)=>{
+    console.log(event);
+    if(event.key == 'b'){
+       document.body.classList.remove('blacktheme');
+    }
+})
+
+/////////////////////// MOUSE EVENT ////////////////////////
+
+/////////////////////// MOUSE EVENT ////////////////////////
