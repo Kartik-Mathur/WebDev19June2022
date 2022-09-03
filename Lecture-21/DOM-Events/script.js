@@ -51,5 +51,15 @@ document.body.addEventListener('keyup',(event)=>{
 })
 
 /////////////////////// MOUSE EVENT ////////////////////////
-
+btn.addEventListener('mousedown',(ev)=>{
+    if(ev.button == 0){
+        console.log('Left Click!');
+    }
+    else if(ev.button == 1){
+        console.log('Middle Click!');
+    }
+    else{
+        console.log('Right Click!');
+    }
+})
 /////////////////////// MOUSE EVENT ////////////////////////

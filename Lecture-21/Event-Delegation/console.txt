@@ -1,0 +1,11 @@
+let btn1 = document.createElement('button');
+undefined
+btn1.innerText = '10'
+'10'
+let container = document.querySelector('#container');
+undefined
+container.appendChild(btn1);
+<button>​10​</button>​
+
+// New button add krne par, eventListner kaam nhi krega because ek ek
+// button par add kia hai humne eventListner ko
