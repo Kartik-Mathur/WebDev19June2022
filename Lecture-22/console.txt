@@ -1,0 +1,29 @@
+$('#div')
+S.fn.init [div#div]0: div#divlength: 1[[Prototype]]: Object(0)
+document.querySelector('#div')
+<div id=​"div">​Hello World!​</div>​
+jQuery('#div')
+S.fn.init [div#div]0: div#divlength: 1[[Prototype]]: Object(0)
+let d = document.querySelector('#div')
+undefined
+d.style.backgroundColor = 'red';
+'red'
+$('#div').css('background-color','purple');
+S.fn.init [div#div]
+$('#div').attr('id')
+'div'
+$('#div').attr('id','mydiv');
+S.fn.init [div#mydiv]
+
+let x = $('#div')
+undefined
+let y = $('#div').css('color','orange');
+undefined
+x == y
+false
+let z = x
+undefined
+z == x
+true
+z.css('color','white');
+S.fn.init [div#div]

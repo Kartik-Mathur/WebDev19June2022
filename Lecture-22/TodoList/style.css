@@ -1,0 +1,12 @@
+button{
+    margin: 0 5px;
+}
+
+li{
+    margin: 10px auto;
+}
+
+ul li:first-child .btn-up,
+ul li:last-child .btn-down{
+    display: none;
+}
