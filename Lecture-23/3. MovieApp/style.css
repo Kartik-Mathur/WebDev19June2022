@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+
+section{
+    width: 80vw;
+    margin: auto;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+input,
+button{
+    padding: 5px;
+    font-size: 16px;
+}
+
+#movieContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
