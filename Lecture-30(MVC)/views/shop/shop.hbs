@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product {
+            border: 1px solid black;
+            margin: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Shop</a>
+        <a href="/admin/product-list">Products</a>
+    </nav>
+    <h1>My Shop</h1>
+    {{#if hasProducts}} 
+    <article class="product">
+        {{#each products as |product|}}
+        <form action="#">
+            <h1>{{product}}</h1>
+            <img width="100%" src="https://cdn.thisiswhyimbroke.com/images/google-sneakers1.jpg">
+            <p>Awesome Shoes</p>
+            <div>
+                $19.99
+            </div>
+            <button>Add To Cart</button>
+        </form>
+        {{/each}}
+    </article>
+    {{else}}
+    <h1>No Products</h1>
+    {{/if}}
+</body>
+
+</html>

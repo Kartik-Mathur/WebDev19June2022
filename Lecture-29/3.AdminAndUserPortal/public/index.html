@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <h1>Welcome to todo app!</h1>
-    <ul>
-        {{#each taskList as |task|}}
-        <li>{{task}}</li>
-        {{/each}}
-    </ul>
-</body>
+    <h1>Welcome to Todo App</h1>
+    <form action="/user" method="GET">
+        <button type="submit">User</button>
+    </form>
 
+    <form action="/admin" method="GET">
+        <button type="submit">Admin</button>
+    </form>
+</body>
 </html>

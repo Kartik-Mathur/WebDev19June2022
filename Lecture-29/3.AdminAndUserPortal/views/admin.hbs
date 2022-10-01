@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Welcome to admin portal</h1>
+    <form action="/admin" method="POST">
+        <input type="text" name="name" placeholder="Enter name">
+        <input type="text" name="newtask" placeholder="Enter task">
+        <button type="submit">Add!</button>
+    </form>
+
+    <ul>
+        {{#each taskList as |task|}}
+            <li>{{task}}</li>
+        {{/each}}   
+    </ul>
 </body>
 </html>
