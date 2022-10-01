@@ -1,11 +1,15 @@
-const products =  require('./admin').products;
+// const products =  require('./admin').products;
+const Product = require('../models/product');
 
 module.exports.getShop =  (req,res,next)=>{
-    res.render(
-        './shop/shop',{
-            path:'/',
-            products,
-            hasProducts: products.length>0
-        }
-    )
+    Product.getAllProducts((products)=>{
+        res.render(
+            './shop/shop',{
+                path:'/',
+                products,
+                hasProducts: products.length>0
+            }
+        )
+    })
+    
 };
