@@ -1,0 +1,7 @@
+.product {
+    border: 1px solid black;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
