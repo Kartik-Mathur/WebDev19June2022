@@ -6,15 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/form.css">
 </head>
 
 <body>
-    <nav>
-        <a href="/">Shop</a>
-        <a href="/admin/product-list">Products</a>
-    </nav>
-    <h1>Products</h1>
+    {{> navbar}}
+
+    <h1>Add Product</h1>
 
     <form action="/admin/add-product" method="POST">
         <label for="newProduct">Product</label>
@@ -31,25 +28,6 @@
         <br>
         <button type="submit">Add Product</button>
     </form>
-
-    {{#if hasProducts}}
-    <article class="product">
-        {{#each products as |product|}}
-        <form action="#">
-            <h1>{{product.name}}</h1>
-            <img width="100%" src="{{product.imageUrl}}">
-            <p>{{product.description}}</p>
-            <div>
-                ${{product.price}}
-            </div>
-            <button>Edit</button>
-            <button>Delete</button>
-        </form>
-        {{/each}}
-    </article>
-    {{else}}
-    <h1>No Products</h1>
-    {{/if}}
 </body>
 
 </html>
