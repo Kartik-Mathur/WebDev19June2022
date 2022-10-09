@@ -10,6 +10,8 @@ module.exports = class Product {
         this.imageUrl = imageUrl;
     }
 
+    getAll
+
     save() {
         // 'this' belongs to the Product that we create
         const filePath = path.join(
@@ -68,6 +70,26 @@ module.exports = class Product {
             else {
                 console.log(err);
             }
+        })
+    }
+
+
+    static deleteProduct(id){
+        const filePath = path.join(
+            __dirname,
+            "..",
+            'data',
+            'product.json'
+        );
+        this.getAllProducts((products)=>{
+            const updatedProducts  = products.filter(p=>p.id != id);
+            fs.writeFile(
+                filePath,
+                JSON.stringify(updatedProducts),
+                (err) => {
+                    console.log(err);
+                    if (!err) console.log('Done');
+            });
         })
     }
 }

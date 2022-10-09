@@ -31,7 +31,10 @@
                 <input type="hidden" name="productId" value="{{product.id}}">
                 <button  type="submit">Edit</button>
             </form>
-            <button>Delete</button>
+            <form action="/admin/delete-product" method="POST">
+                <input type="hidden" name="productId" value="{{product.id}}">
+                <button type="submit">Delete</button>
+            </form>
         </div>
         {{/each}}
     </article>

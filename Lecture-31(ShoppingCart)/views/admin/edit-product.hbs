@@ -8,7 +8,7 @@
 </head>
 <body>
     {{>navbar}}
-     <form action="/admin/update-product" method="POST">
+     <form action="/admin/edit-product" method="POST">
         <label for="newProduct">Product</label>
         <input type="text" name="newProduct" value="{{product.name}}" id="newProduct" placeholder="Product Name">
         <br>
@@ -20,6 +20,7 @@
         <br>
         <label for="description">Description</label>
         <textarea name="description" id="description">{{product.description}}</textarea>
+        <input type="hidden" name="productId" value="{{product.id}}">
         <br>
         <button type="submit">Update Product</button>
     </form>

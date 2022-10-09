@@ -51,3 +51,22 @@ module.exports.getEditProduct = (req,res,next)=>{
         // });
     })
 }
+
+module.exports.postEditProduct =  (req,res,next)=>{
+    console.log(req.body);
+    let newProduct = new Product(
+        req.body.productId,
+        req.body.newProduct,
+        req.body.price,
+        req.body.description,
+        req.body.imageUrl
+    );
+    newProduct.save();
+    res.redirect('/');
+}
+
+module.exports.postDeleteProduct = (req,res,next)=>{
+    const productId = req.body.productId;
+    Product.deleteProduct(productId);
+    res.redirect('/');
+}
