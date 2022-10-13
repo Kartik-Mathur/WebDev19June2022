@@ -11,26 +11,31 @@
 </head>
 
 <body>
-    {{> navbar}}
+    {{>navbar}}
 
-    <h1>My Shop</h1>
+    <h1>My Cart</h1>
     {{#if hasProducts}}
     <article class="product">
         {{#each products as |product|}}
         <div class="product-card">
-            <form action="/add-to-cart" method="POST">
+            <form action="#" method="">
                 <h1>{{product.name}}</h1>
                 <img class="product-image" src="{{product.imageUrl}}">
                 <p>{{product.description}}</p>
                 <div>
-                    ${{product.price}}
+                    ${{product.price}}, Qty:{{product.qty}}
                 </div>
                 <input type="hidden" name="productId" value="{{product.id}}">
-                <button>Add To Cart</button>
+            </form>
+            <form action="/delete-cart-item" method="POST">
+                <input type="hidden" name="productId" value="{{product.id}}">
+                <button>Delete</button>
             </form>
         </div>
         {{/each}}
     </article>
+    <div>TotalPrice: {{totalPrice}}</div>
+    <button>Checkout</button>
     {{else}}
     <h1>No Products</h1>
     {{/if}}
