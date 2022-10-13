@@ -31,6 +31,7 @@ module.exports.getCart = (req,res,next)=>{
     Cart.getCart(cart=>{
         Product.getAllProducts(products=>{
             const cartProducts = cart.products;
+            console.log(cart);
             const myCartProducts = [];
             cartProducts.forEach(element => {
                 let p = products.find(product => product.id == element.id);

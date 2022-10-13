@@ -10,8 +10,6 @@ module.exports = class Product {
         this.imageUrl = imageUrl;
     }
 
-    getAll
-
     save() {
         // 'this' belongs to the Product that we create
         const filePath = path.join(
