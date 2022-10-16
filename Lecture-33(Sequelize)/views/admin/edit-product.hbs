@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{>navbar}}
+     <form action="/admin/edit-product" method="POST">
+        <label for="newProduct">Product</label>
+        <input type="text" name="newProduct" value="{{product.name}}" id="newProduct" placeholder="Product Name">
+        <br>
+        <label for="price">Price</label>
+        <input type="text" name="price" value="{{product.price}}" id="price" placeholder="Price">
+        <br>
+        <label for="imageUrl">Image Url</label>
+        <input type="text" name="imageUrl" value="{{product.imageUrl}}" id="imageUrl" placeholder="imageUrl">
+        <br>
+        <label for="description">Description</label>
+        <textarea name="description" id="description">{{product.description}}</textarea>
+        <input type="hidden" name="productId" value="{{product.id}}">
+        <br>
+        <button type="submit">Update Product</button>
+    </form>
+</body>
+</html>
