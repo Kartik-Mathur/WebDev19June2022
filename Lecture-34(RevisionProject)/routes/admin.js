@@ -3,11 +3,11 @@ const route  = express.Router();
 
 const products = require('../data/products');
 
-route.get('/product-list',(req,res,next)=>{
-    res.render('./admin/product-list',{
-        hasProducts: products.length>0,
-        products:products
-    })
-})
+const adminController = require('../controller/admin');
+
+route.get('/product-list',adminController.getProductList);
+route.get('/add-product',adminController.getAddProduct);
+route.post('/add-product',adminController.postAddProduct);
+
 
 module.exports = route;
