@@ -1,12 +1,8 @@
 const express = require('express');
 const route  = express.Router();
 const products = require('../data/products');
+const shopController = require('../controller/shop');
 
-route.get('/',(req,res,next)=>{
-    res.render('./shop/shop',{
-        hasProducts: products.length>0,
-        products:products
-    })
-})
+route.get('/',shopController.getShop);
 
 module.exports = route;

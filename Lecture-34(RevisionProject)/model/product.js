@@ -1,4 +1,5 @@
-const products = require('../data/products');
+// const products = require('../data/products');
+const db = require('../util/database');
 
 module.exports = class Product{
     constructor(name,price,description,imageUrl){
@@ -9,6 +10,14 @@ module.exports = class Product{
     }
     
     save(){
-        products.push(this);
+        return db.execute(
+            `INSERT INTO products(name, price, description,imageUrl)
+            VALUES (?,?,?,?)`,
+            [this.name,this.price,this.description,this.imageUrl]
+        )
+    }
+
+    static getAllProducts(){
+        return db.execute(`SELECT * FROM products`);
     }
 };
