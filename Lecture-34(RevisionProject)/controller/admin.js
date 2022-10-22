@@ -1,11 +1,11 @@
 const Product = require('../model/product');
-const products = require('../data/products');
+// const products = require('../data/products');
 
 module.exports.getProductList = (req, res, next) => {
     Product
         .getAllProducts()
         .then(([products, fields]) => {
-            console.log(products);
+            // console.log(products);
             res.render('./admin/product-list', {
                 hasProducts: products.length > 0,
                 products: products
@@ -27,7 +27,7 @@ module.exports.postAddProduct = (req, res, next) => {
     const newProduct = new Product(
         name, price, description, imageUrl
     );
-    console.log("New Product: ", newProduct);
+    // console.log("New Product: ", newProduct);
     newProduct
         .save()
         .then(() => {
@@ -35,4 +35,16 @@ module.exports.postAddProduct = (req, res, next) => {
         })
         .catch(err => console.log(err));
 
+}
+
+module.exports.getEditProduct = (req, res, next) => {
+    const productId = req.query.id;
+    Product
+        .getProductById(productId)
+        .then(([products, fields]) => {
+            let product = products[0];
+            res.render('./admin/edit-product', {
+                product: product
+            });
+        })
 }

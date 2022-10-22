@@ -17,33 +17,8 @@
 <body>
     {{> navbar}}
 
-    <h1>Admin Products</h1>
-    {{#if hasProducts}}
-    <h1>Products List</h1>
-    <div class="flexbox">
-        {{#each products as |product|}}
-        <article class="product">
-            <div>
-                <h1>{{product.name}}</h1>
-                <img class="product-image" src="{{product.imageUrl}}" alt="">
-                <div>
-                    <span>Price: ${{product.price}} </span>
-                </div>
-                <div>
-                    <span>Description: {{product.description}} </span>
-                </div>
-            </div>
-
-            <button>
-                <a href="/admin/edit-product?id={{product.id}}">Edit</a>
-            </button>
-            <button>Delete</button>
-        </article>
-        {{/each}}
-    </div>
-    {{else}}
-    <h1>No Products</h1>
-    {{/if}}
+    <h1>Edit Product</h1>
+    {{> edit_product_form product=product}}
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

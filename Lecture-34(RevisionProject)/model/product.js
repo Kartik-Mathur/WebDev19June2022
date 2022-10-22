@@ -20,4 +20,9 @@ module.exports = class Product{
     static getAllProducts(){
         return db.execute(`SELECT * FROM products`);
     }
+
+    static getProductById(id){
+        return db.execute(`SELECT * FROM products WHERE id = ?`,
+        [id]);
+    }
 };

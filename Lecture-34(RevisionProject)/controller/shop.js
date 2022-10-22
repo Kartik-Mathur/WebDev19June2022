@@ -8,5 +8,6 @@ module.exports.getShop = (req,res,next)=>{
             hasProducts: products.length>0,
             products:products
         })
-    }).catch(err=>console.log(err));
+    })
+    .catch(err=>console.log(err));
 }
