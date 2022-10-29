@@ -1,0 +1,20 @@
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-image{
+    height: 120px;
+}
+
+.product{
+    /* height: 250px; */
+    border: 1px solid black;
+    width: 200px;
+    margin:10px;
+}
+
+.myform{
+    width: 50%;
+    margin: auto;
+}

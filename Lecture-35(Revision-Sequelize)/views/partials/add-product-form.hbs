@@ -1,0 +1,19 @@
+<form method="POST" action="/admin/add-product" class="myform">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" id="price" step="0.01">
+    </div>
+    <div class="mb-3">
+        <label for="description">Description</label>
+        <input name="description"  type="text" class="form-control" id="description">
+    </div>
+    <div class="mb-3">
+        <label for="imageUrl">Image Url</label>
+        <input type="text" class="form-control" id="imageUrl" name="imageUrl">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
