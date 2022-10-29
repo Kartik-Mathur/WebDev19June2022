@@ -1,6 +1,7 @@
 const Products  = require('../model/product');
 
 module.exports.getShop = (req,res,next)=>{
+    console.log("Inside shop",req.user);
     Products
     .findAll()
     .then((products)=>{

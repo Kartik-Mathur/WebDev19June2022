@@ -1,9 +1,7 @@
-const Products = require('../model/product');
 // const products = require('../data/products');
-
+const Products = require('../model/product');
 module.exports.getProductList = (req, res, next) => {
-    Products
-        .findAll()
+    req.user.getProducts()
         .then((products) => {
             // console.log(products);
             res.render('./admin/product-list', {
@@ -24,8 +22,8 @@ module.exports.postAddProduct = (req, res, next) => {
     const description = req.body.description;
     const imageUrl = req.body.imageUrl;
 
-    Products
-        .create({
+    req.user
+        .createProduct({
             name,
             price,
             description,
@@ -70,7 +68,7 @@ module.exports.postEditProduct = (req, res, next) => {
             product.description = description;
             product.imageUrl = imageUrl;
 
-            product.save();
+            return product.save();
         })
         .then(() => {
             res.redirect('/');

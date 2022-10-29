@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../util/database');
+const db = require('../util/database');
 
-const Products =  sequelize.define('products',{
+const Products =  db.define('products',{
     id:{
         type: Sequelize.INTEGER,
         allowNull: false,
