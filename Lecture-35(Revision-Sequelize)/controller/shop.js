@@ -1,9 +1,9 @@
-const Product  = require('../model/product');
+const Products  = require('../model/product');
 
 module.exports.getShop = (req,res,next)=>{
-    Product
-    .getAllProducts()
-    .then(([products,fields])=>{
+    Products
+    .findAll()
+    .then((products)=>{
         res.render('./shop/shop',{
             hasProducts: products.length>0,
             products:products

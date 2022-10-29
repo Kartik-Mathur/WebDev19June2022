@@ -1,10 +1,10 @@
-const Product = require('../model/product');
+const Products = require('../model/product');
 // const products = require('../data/products');
 
 module.exports.getProductList = (req, res, next) => {
-    Product
-        .getAllProducts()
-        .then(([products, fields]) => {
+    Products
+        .findAll()
+        .then((products) => {
             // console.log(products);
             res.render('./admin/product-list', {
                 hasProducts: products.length > 0,
@@ -24,12 +24,13 @@ module.exports.postAddProduct = (req, res, next) => {
     const description = req.body.description;
     const imageUrl = req.body.imageUrl;
 
-    const newProduct = new Product(
-        name, price, description, imageUrl
-    );
-    // console.log("New Product: ", newProduct);
-    newProduct
-        .save()
+    Products
+        .create({
+            name,
+            price,
+            description,
+            imageUrl
+        })
         .then(() => {
             res.redirect('/');
         })
@@ -39,10 +40,15 @@ module.exports.postAddProduct = (req, res, next) => {
 
 module.exports.getEditProduct = (req, res, next) => {
     const productId = req.query.id;
-    Product
-        .getProductById(productId)
-        .then(([products, fields]) => {
-            let product = products[0];
+    // Products
+    //     .findAll({
+    //         where: {
+    //             id: productId
+    //         }
+    //     })
+    Products
+    .findByPk(productId)
+        .then((product) => {
             res.render('./admin/edit-product', {
                 product: product
             });
@@ -56,12 +62,16 @@ module.exports.postEditProduct = (req, res, next) => {
     const description = req.body.description;
     const imageUrl = req.body.imageUrl;
 
-    const newProduct = new Product(
-        name, price, description, imageUrl
-    );
+    Products
+        .findByPk(productId)
+        .then((product)=>{
+            product.name = name;
+            product.price = price;
+            product.description = description;
+            product.imageUrl = imageUrl;
 
-    Product
-        .updateProductById(productId,newProduct)
+            product.save();
+        })
         .then(() => {
             res.redirect('/');
         })
@@ -71,8 +81,12 @@ module.exports.postEditProduct = (req, res, next) => {
 module.exports.getDeleteProduct = (req, res, next) => {
     const productId = req.query.id;
 
-    Product
-        .deleteProductById(productId)
+    Products
+        .destroy({
+            where:{
+                id:productId
+            }
+        })
         .then(() => {
             res.redirect('/');
         })
