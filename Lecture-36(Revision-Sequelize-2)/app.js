@@ -20,7 +20,7 @@ app.use((req, res, next) => {
             req.user = user;
             next();
         })
-        .catch(err=>console.log(err));
+        .catch(err => console.log(err));
 })
 app.set('view engine', 'hbs');
 
@@ -35,18 +35,30 @@ User.hasMany(Products, { onDelete: 'CASCADE' });
 Products.belongsTo(User);
 User.hasOne(Cart);
 Cart.belongsTo(User);
-Products.belongsToMany(Cart,{through:cartItem});
+Products.belongsToMany(Cart, { through: cartItem });
 
-
+let myuser;
 sequelize
     // .sync({force: true})
     .sync()
-    .then(() => {
+    .then(()=>{
+        return User.findByPk(1);
+    })
+    .then((user) => {
+        if(user) return user;
         return User.create({
             name: 'Kartik',
             email: 'km@cb.lk'
         });
-    }).then(() => {
+    }).then((user) => {
+        myuser = user;
+        return user.getCart();
+    })
+    .then(cart=>{
+        if(cart) return cart;
+        return myuser.createCart();
+    })
+    .then(() => {
         app.listen(PORT, () => {
             console.log(`http://localhost:${PORT}`);
         })
