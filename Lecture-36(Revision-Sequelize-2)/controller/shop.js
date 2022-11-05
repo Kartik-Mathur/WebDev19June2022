@@ -1,8 +1,8 @@
-const Products = require('../model/product');
+const Product = require('../model/product');
 
 module.exports.getShop = (req, res, next) => {
     console.log("Inside shop", req.user);
-    Products
+    Product
         .findAll()
         .then((products) => {
             res.render('./shop/shop', {
@@ -17,6 +17,7 @@ module.exports.getCart = (req, res, next) => {
     req.user
         .getCart()
         .then(cart=>{
+            console.log(cart);
             return cart.getProducts();
         }).then(products=>{
             res.render('./shop/cart',{

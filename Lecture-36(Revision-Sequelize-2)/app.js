@@ -3,7 +3,7 @@ const app = express();
 const PORT = 4444;
 const path = require('path');
 const sequelize = require('./util/database');
-const Products = require('./model/product');
+const Product = require('./model/product');
 const User = require('./model/user');
 const Cart = require('./model/cart');
 const cartItem = require('./model/cart-item');
@@ -31,11 +31,11 @@ app.use('/admin', adminRouter);
 app.use('/', shopRouter);
 
 
-User.hasMany(Products, { onDelete: 'CASCADE' });
-Products.belongsTo(User);
+User.hasMany(Product, { onDelete: 'CASCADE' });
+Product.belongsTo(User);
 User.hasOne(Cart);
 Cart.belongsTo(User);
-Products.belongsToMany(Cart, { through: cartItem });
+Product.belongsToMany(Cart, { through: cartItem });
 
 let myuser;
 sequelize
