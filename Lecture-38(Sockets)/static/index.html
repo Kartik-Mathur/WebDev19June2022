@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="./script.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
     <h1>Chat App</h1>
-    <input type="text" id="chat">
-    <button id="btn">Send</button>
+    <div id="userdetails">
+        <input id="username" type="text" placeholder="enter name">
+        <button id="login">Login!</button>
+    </div>
+    <div id="chatbox">
+        <input type="text" id="chat" placeholder="message">
+        <button id="btn">Send</button>
+    </div>
+
+    
 </body>
 </html>
