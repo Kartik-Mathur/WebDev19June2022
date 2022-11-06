@@ -23,3 +23,4 @@ async function main() {
 main()
     .then(()=>console.log('done'))
     .catch((err)=>console.log(err))
+    .finally(()=> client.close())
