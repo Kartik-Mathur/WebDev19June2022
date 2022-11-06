@@ -9,16 +9,23 @@ let userIdMap = {};
 
 io.on("connection",(socket)=>{
     console.log(socket.id);
+
     socket.emit('loggedIn');
+// Chat ka event
     socket.on('chat',(details)=>{
         console.log(userIdMap[details.id],"said",details.message);
-        
+        io.emit('replyToAll',{
+            userName: userIdMap[details.id],
+            message: details.message
+        });
     })
 
     // Loggin hone ke time 
     socket.on('startChat',(data)=>{
         userIdMap[data.id] = data.name;
-        socket.emit('chatDone');
+        socket.emit('chatDone',{
+            userName: data.name
+        });
     })
 })
 
