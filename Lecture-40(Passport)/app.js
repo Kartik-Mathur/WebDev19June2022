@@ -8,7 +8,7 @@ const PORT = 4444;
 
 app.use(express.urlencoded({ extended: true }));
 const store = new MongoDBStore({
-    uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
+    uri: 'mongodb://localhost:27017/userdetails',
     collection: 'sessions'
 });
 
