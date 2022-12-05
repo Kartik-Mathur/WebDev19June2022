@@ -5,6 +5,7 @@ const route = require('express').Router();
 route.get('/login', (req, res, next) => {
     console.log(req.session);
     console.log(req.user);
+    if(req.user) return res.redirect('/profile');
     res.render('login');
 })
 
@@ -22,15 +23,28 @@ route.post('/signup',(req,res,next)=>{
         username: req.body.username,
         password: req.body.password
     });
-    newUser.save((err)=>{
-        if(err) return new Error("Signup nhi ho paaya");
+    newUser.save().then((user)=>{
+        console.log("Signup",user);
         res.redirect('/login');
     })
 })
 
 route.get('/profile',(req,res,next)=>{
+    if(!req.user){
+        console.log(req);
+        return res.redirect('/login');
+    }
     console.log(req.session);
     console.log(req.user);
-    res.send("Welcome to the portal");
+    res.render('profile',{
+        username: req.user.username
+    });
+})
+
+route.get('/logout',(req,res,next)=>{
+    req.logout((err)=>{
+        if(err) return new Error("Dikat hai logout mei");
+        res.redirect('/login');
+    });
 })
 module.exports = route;
