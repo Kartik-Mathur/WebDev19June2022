@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from './Form'
 import Product from './Product'
 
 const ShoppingList = () => {
@@ -22,6 +23,7 @@ const ShoppingList = () => {
 
     return (
         <div>
+            <Form />
             {
                 products.map((product,indx)=>{
                     return <Product 
