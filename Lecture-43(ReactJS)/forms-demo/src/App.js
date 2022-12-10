@@ -1,14 +1,12 @@
 import './App.css';
 import Person from './Person';
 import Navbar from './Navbar';
-import ShoppingList from './components/ShoppingList';
 
 function App() {
   return (
     <div className="App">
       
-      <ShoppingList />    
-      {/* <Person name="Mayank" age="22" color="Green">
+      <Person name="Mayank" age="22" color="Green">
         <p>This is a para inside closing tag of person</p>
         <h1>This is heading inside the person closing tag</h1>
       </Person>
@@ -16,7 +14,7 @@ function App() {
       <Person name="Kunal" age="18" color="Orange" />
       <Person name="Kunal" age="18" color="Orange" />
       <Person name="Kunal" age="18" color="Orange" />
-      <Navbar /> */}
+      <Navbar />
     </div>
   );
 }

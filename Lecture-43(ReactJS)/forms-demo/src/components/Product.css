@@ -1,0 +1,15 @@
+.product{
+    width: 360px;
+    padding: 20px;
+    margin: 10px auto;
+    border: 2px solid grey;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    /* display: inline-block;
+    height: 400px; */
+}
+
+.product img{
+    width: 100%;
+}

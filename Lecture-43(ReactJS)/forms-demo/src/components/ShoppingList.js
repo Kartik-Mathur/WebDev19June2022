@@ -1,9 +1,9 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Form from './Form'
 import Product from './Product'
 
 const ShoppingList = () => {
-    const DUMMY_PRODUCTS = [
+    const products = [
         {
             name:'Iphone 14',
             price:2000,
@@ -21,22 +21,9 @@ const ShoppingList = () => {
         }
     ]
 
-    const [products, setProducts] = useState(DUMMY_PRODUCTS);
-
-    const addProduct=(product)=>{
-        console.log('Inside shopping list:',product);
-        // products.push(product);
-        // We always create a new array, and never update 
-        // the previous 'products' array we created using
-        // useState hook!!!!
-        
-        setProducts([...products,product]);
-        console.log(products);
-    }
-
     return (
         <div>
-            <Form addProduct={addProduct} />
+            <Form />
             {
                 products.map((product,indx)=>{
                     return <Product 
