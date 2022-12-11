@@ -1,12 +1,12 @@
 import './App.css';
-import Form from './components/Form/Form';
 import Todo from './components/Todo/Todo';
+import TodoApp from './components/TodoApp/TodoApp';
 
 function App() {
   return (
     <div className="App">
-      <Form/>
-      <Todo />
+      <h1>Todo List</h1>
+      <TodoApp/>
     </div>
   );
 }

@@ -1,11 +1,17 @@
 import React from 'react'
-import classes from './Todo.module.css';
+import classes from './Todo.module.css'
+import {FaTrashAlt} from 'react-icons/fa';
 
-const Todo = () => {
+const Todo = (props) => {
     return (
-        <div className={classes.heading}>
-            This is a Todo App
-        </div>
+        <li className={classes['list-item']}>
+            <input
+                type="checkbox"
+                defaultChecked={props.completed}
+            ></input>
+            <span>{props.task}</span>
+            <FaTrashAlt className={classes.floatRight} />
+        </li>
     )
 }
 

@@ -3,9 +3,13 @@ import classes from './Form.module.css';
 
 const Form = () => {
     return (
-        <div className={classes.heading}>
-            This is a form
-        </div>
+        <form className={classes.form}>
+            <input
+                type="text"
+                placeholder="Enter Task"
+            ></input>
+            <button>Add Task</button>
+        </form>
     )
 }
 

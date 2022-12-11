@@ -1,5 +1,12 @@
-.heading{
-    background-color: rgba(125, 27, 155, 0.726);
-    color: whitesmoke;
+.list-item{
+    margin: 2px 0;
+    padding: 16px;
+    border: 2px solid white;
+    background-color: rgb(130, 4, 180);
+    color: white;
     font-weight: 800;
+}
+
+.floatRight{
+    float: right;
 }

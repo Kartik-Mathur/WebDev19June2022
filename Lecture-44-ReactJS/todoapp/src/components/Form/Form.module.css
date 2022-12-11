@@ -1,5 +1,16 @@
-.heading{
-    background-color: orange;
+.form{
+    background-color: rgb(130, 4, 180);
     color: whitesmoke;
     font-weight: 800;
+    padding: 16px;
+    width: 360px;
+    margin: auto;
+}
+
+.form button{
+    float: right;
+}
+
+.form input{
+    width: 250px;
 }
