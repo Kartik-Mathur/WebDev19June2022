@@ -45,7 +45,7 @@ const TodoApp = () => {
     const markDone = (id)=>{
         setTodos((prevState)=>{
             return prevState.map((todo)=> todo.id == id ? {
-                todo,completed: !todo.completed
+                ...todo,completed: !todo.completed
             }:todo)
         })
     }
