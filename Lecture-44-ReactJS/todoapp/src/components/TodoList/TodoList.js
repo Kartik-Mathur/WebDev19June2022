@@ -1,31 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Todo from '../Todo/Todo';
 import classes from './TodoList.module.css';
 
-const TodoList = () => {
-    const todos = [
-        {
-            task:'Coding Blocks Jaana',
-            completed: false,
-            id:'2312'
-        },
-        {
-            task:'Learn React',
-            completed: true,
-            id:'5432'
-        },
-        {
-            task:'Play Cricket',
-            completed: false,
-            id:'2762'
-        },
-        {
-            task:'Go to clubs',
-            completed: true,
-            id:'2315'
-        }
-    ];
-
+const TodoList = (props) => {
+    let todos = props.todos
     return (
         <ul className={classes.ul}>
             {
@@ -36,6 +14,8 @@ const TodoList = () => {
                         id={todo.id}
                         task={todo.task}
                         completed={todo.completed}
+                        deleteTodo = {props.deleteTodo}
+                        markDone ={props.markDone}
                         />
                     )
                 })
