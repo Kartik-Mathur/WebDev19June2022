@@ -1,0 +1,18 @@
+.nav{
+  width: 100%;
+  border: 2px solid black;
+  display: inline-block;
+  color: white;
+  background-color: teal;
+}
+
+.nav-item{
+  cursor: pointer;
+  display: inline-block;
+  padding: 16px;
+  margin: 5px;
+}
+
+.nav-item:hover{
+  text-decoration: underline;
+} 
