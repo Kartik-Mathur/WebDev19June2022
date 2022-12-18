@@ -17,6 +17,16 @@ describe('app_test',()=>{
         }).catch(err=>done(err));
     })
 
+    it('checking /fare?km=10&min=50',(done)=>{
+        axios.get('http://localhost:4444/fare?km=10&min=50')
+        .then((data)=>{
+            // console.log(data);
+            expect(data.data).to.equal(280);
+            done();
+        })
+        .catch(er=>done(er));
+    })
+
     after(()=>{
         server.close();
     })

@@ -8,6 +8,11 @@ app.get('/hello',(req,res)=>{
     res.send('hello');
 })
 
+app.get('/fare',(req,res)=>{
+    let fare = calculateFare(req.query.km,req.query.min);
+    // console.log(fare);
+    res.send(''+fare);
+})
 
 module.exports = app;
 // app.listen(PORT,()=>{
