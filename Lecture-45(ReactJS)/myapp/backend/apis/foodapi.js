@@ -16,4 +16,8 @@ router.get('/getAllFood',async (req,res,next)=>{
     res.status(200).json(food);
 })
 
+router.post('/storeFood',async(req,res,next)=>{
+    
+})
+
 module.exports = router;
